@@ -24,14 +24,14 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule (.*) $1\.html [L]
 
-## Homepage silent redirect to /main
+## Homepage silent redirect to /precisepixels/main
 RewriteCond %{HTTP_HOST} ^(www.)?precisepixels.co.uk$
-RewriteCond %{REQUEST_URI} !^/main/
+RewriteCond %{REQUEST_URI} !^/precisepixels/main/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /main/$1
+RewriteRule ^(.*)$ /precisepixels/main/$1
 RewriteCond %{HTTP_HOST} ^(www.)?precisepixels.co.uk$
-RewriteRule ^(/)?$ main/index.php [L]
+RewriteRule ^(/)?$ precisepixels/main/index.php [L]
 
 ## Silent directory redirects
 RewriteCond %{REQUEST_URI} ^/hexwords(.+)?$
