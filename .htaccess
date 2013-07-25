@@ -34,10 +34,13 @@ RewriteCond %{HTTP_HOST} ^(www.)?precisepixels.co.uk$
 RewriteRule ^(/)?$ precisepixels/main/index.php [L]
 
 ## Silent directory redirects
-RewriteCond %{REQUEST_URI} ^/beta(.+)?$
+RewriteCond %{REQUEST_URI} ^/beta/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/beta/%1 [L]
 
-RewriteCond %{REQUEST_URI} ^/hexwords(.+)?$
+RewriteCond %{REQUEST_URI} ^/DelhiKitchen/(.+)?$
+RewriteRule ^(.*)$ /precisepixels/DelhiKitchen/%1 [L]
+
+RewriteCond %{REQUEST_URI} ^/hexwords/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/hexwords/%1 [L]
 
 ## Sub-directory redirects
