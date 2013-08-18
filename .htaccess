@@ -47,10 +47,14 @@ RewriteCond %{REQUEST_URI} ^/hexwords/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/hexwords/%1 [L]
 
 ## Sub-directory redirects
+Redirect /precisepixels/peter-batten  http://peterbatten.co.uk
+
 Redirect /jacob/sarah-lola http://sarah-lola.co.uk
 Redirect /jacob/steph-sof  http://stephaniesofokleous.co.uk
+Redirect /jacob/main  http://jacobhammond.co.uk
 
 Redirect /james/jalproductions http://jalproductions.co.uk
 
 Redirect /joe/mainsite http://mrjwilliams.co.uk
 Redirect /joe/count http://faooful.com
+Redirect /joe/hannah http://hannahcastleman.co.uk
