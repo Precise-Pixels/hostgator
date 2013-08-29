@@ -43,6 +43,9 @@ RewriteRule ^(.*)$ /precisepixels/old/%1 [L]
 RewriteCond %{REQUEST_URI} ^/DelhiKitchen/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/DelhiKitchen/%1 [L]
 
+RewriteCond %{REQUEST_URI} ^/gdcms/(.+)?$
+RewriteRule ^(.*)$ /precisepixels/gdcms/%1 [L]
+
 RewriteCond %{REQUEST_URI} ^/hexwords/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/hexwords/%1 [L]
 
