@@ -1,28 +1,5 @@
-RewriteEngine on
-RewriteBase /
-
 ## Hide directory listings
 Options -Indexes
-
-# remove .php; use THE_REQUEST to prevent infinite loops
-RewriteCond %{HTTP_HOST} ^www\.precisepixels\.co.uk
-RewriteCond %{THE_REQUEST} ^GET\ (.*)\.php\ HTTP
-RewriteRule (.*)\.php$ $1 [R=301]
-
-## Add trailing slash to all directories
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteCond %{REQUEST_URI} !(/$|\.)
-RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
-
-## Add .php to access file, but don't redirect
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule (.*) $1\.php [L]
-
-## Add .html to access file, but don't redirect
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule (.*) $1\.html [L]
 
 ## Homepage silent redirect to /precisepixels/main
 RewriteCond %{HTTP_HOST} ^(www.)?precisepixels.co.uk$
@@ -31,7 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /precisepixels/main/$1
 RewriteCond %{HTTP_HOST} ^(www.)?precisepixels.co.uk$
-RewriteRule ^(/)?$ precisepixels/main/index.php [L]
+RewriteRule ^(/)?$ precisepixels/main/ [L]
 
 ## Silent directory redirects
 RewriteCond %{REQUEST_URI} ^/beta/(.+)?$
@@ -50,14 +27,14 @@ RewriteCond %{REQUEST_URI} ^/hexwords/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/hexwords/%1 [L]
 
 ## Sub-directory redirects
-Redirect /precisepixels/peter-batten  http://peterbatten.co.uk
+Redirect /precisepixels/peter-batten http://peterbatten.co.uk
 
+Redirect /jacob/main       http://jacobhammond.co.uk
 Redirect /jacob/sarah-lola http://sarah-lola.co.uk
 Redirect /jacob/steph-sof  http://stephaniesofokleous.co.uk
-Redirect /jacob/main  http://jacobhammond.co.uk
 
 Redirect /james/jalproductions http://jalproductions.co.uk
 
 Redirect /joe/mainsite http://mrjwilliams.co.uk
-Redirect /joe/count http://faooful.com
-Redirect /joe/hannah http://hannahcastleman.co.uk
+Redirect /joe/count    http://faooful.com
+Redirect /joe/hannah   http://hannahcastleman.co.uk
