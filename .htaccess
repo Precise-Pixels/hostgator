@@ -14,6 +14,9 @@ RewriteRule ^(/)?$ precisepixels/main/ [L]
 RewriteCond %{REQUEST_URI} ^/beta/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/beta/%1 [L]
 
+RewriteCond %{REQUEST_URI} ^/cell/(.+)?$
+RewriteRule ^(.*)$ /precisepixels/cell/%1 [L]
+
 RewriteCond %{REQUEST_URI} ^/old/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/old/%1 [L]
 
