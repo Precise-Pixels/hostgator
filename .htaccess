@@ -17,9 +17,6 @@ RewriteRule ^(.*)$ /precisepixels/beta/%1 [L]
 RewriteCond %{REQUEST_URI} ^/cell/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/cell/%1 [L]
 
-RewriteCond %{REQUEST_URI} ^/old/(.+)?$
-RewriteRule ^(.*)$ /precisepixels/old/%1 [L]
-
 RewriteCond %{REQUEST_URI} ^/DelhiKitchen/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/DelhiKitchen/%1 [L]
 
@@ -28,6 +25,12 @@ RewriteRule ^(.*)$ /precisepixels/gdcms/%1 [L]
 
 RewriteCond %{REQUEST_URI} ^/hexwords/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/hexwords/%1 [L]
+
+RewriteCond %{REQUEST_URI} ^/kick-catering/(.+)?$
+RewriteRule ^(.*)$ /precisepixels/kick-catering/%1 [L]
+
+RewriteCond %{REQUEST_URI} ^/old/(.+)?$
+RewriteRule ^(.*)$ /precisepixels/old/%1 [L]
 
 ## Sub-directory redirects
 Redirect /precisepixels/peter-batten http://peterbatten.co.uk
