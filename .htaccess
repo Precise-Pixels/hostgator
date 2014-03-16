@@ -33,6 +33,7 @@ RewriteCond %{REQUEST_URI} ^/old/(.+)?$
 RewriteRule ^(.*)$ /precisepixels/old/%1 [L]
 
 ## Sub-directory redirects
+Redirect /precisepixels/cell http://cell-industries.co.uk
 Redirect /precisepixels/peter-batten http://peterbatten.co.uk
 
 Redirect /jacob/main       http://jacobhammond.co.uk
